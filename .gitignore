@@ -1,0 +1,60 @@
+# Unity, Rider и OS-файлы
+
+# Unity auto-generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Uu]ser[Ss]ettings/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Rider & JetBrains
+/.idea/
+/Assets/Plugins/Editor/JetBrains*
+
+# VS и VS Code
+.vs/
+/.vscode/
+
+# Gradle (Android)
+.gradle/
+
+# Сборки и выходные файлы Unity
+*.apk
+*.aab
+*.app
+*.unitypackage
+
+# Авто-сгенеренные решения/проекты
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Meta, crash, logs
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+
+# macOS, Windows мусор
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
