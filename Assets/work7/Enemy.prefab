@@ -124,7 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubePiecePrefab: {fileID: 6192637668093009616, guid: 491c36cdcf554c64aa6f34cf8e25466c, type: 3}
   explodeForce: 300
-  explodeSoundSource: {fileID: 0}
+  explodeSoundSource: {fileID: 6393154511109746588}
+  textScore: {fileID: 0}
 --- !u!82 &6393154511109746588
 AudioSource:
   m_ObjectHideFlags: 0

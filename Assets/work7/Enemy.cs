@@ -1,4 +1,4 @@
-using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
     public GameObject cubePiecePrefab;
     public float explodeForce = 500f;
     public AudioSource explodeSoundSource;
+    [SerializeField] TMP_Text textScore;
+    private int count;
 
     private void Awake()
     {
@@ -15,15 +17,24 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-            StartCoroutine(StartER());
+        {
+            AddScore();
+            AudioSource.PlayClipAtPoint(explodeSoundSource.clip, transform.position);
+            ExplodeCube();
+        }
     }
 
-    IEnumerator StartER()
+    void Start()
     {
-        explodeSoundSource.Play();
-        yield return new WaitForSeconds(0.3f);
-        ExplodeCube();
+        textScore.text = "Score: " + Progress.Instance.PlayerInfo.Score.ToString();   
     }
+
+    private void AddScore()
+    {
+        Progress.Instance.PlayerInfo.Score += 10;
+        textScore.text = "Score: " + Progress.Instance.PlayerInfo.Score.ToString();
+    }
+
 
     private void ExplodeCube()
     {
@@ -41,6 +52,6 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject);
     }
 }
